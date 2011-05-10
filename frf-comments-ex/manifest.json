@@ -1,0 +1,16 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "css": [ "my.css" ],
+      "js": [ "script.js" ],
+      "matches": [ "http://friendfeed.com/*" ],
+     "run_at": "document_end"
+   } ],
+   "description": "Adds a small button on comments to copy unique comment url",
+   "icons": {
+      "128": "icon_128.png",
+      "48": "icon_48.png"
+   },
+   "name": "frf comment ex",
+   "version": "0.1"
+}
