@@ -1,0 +1,17 @@
+{
+   "name": "FriendFeed fix relative timestamp",
+   "version": "0.1",
+   "description": "Replace relative timestamps with absolute in English interface.",
+   "permissions": [
+      "http://friendfeed-api.com/*"
+    ],
+    "icons": {
+      "48" : "icon_48.png",
+      "128" : "icon_128.png"
+    },
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "http://friendfeed.com/*" ]
+   } ],
+   "background_page": "background.html"
+}
