@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  <script type="text/javascript">
+    function fetchFrfApi(url, callback) {
+//      console.log(url);
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(data) {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+//            console.log(xhr);
+            callback(xhr);
+          } else {
+            console.log(xhr);
+            callback({});
+          }
+        }
+      };
+      // Note that any URL fetched here must be matched by a permission in
+      // the manifest.json file!
+      xhr.open('GET', url, true);
+      xhr.send();
+    }
+
+    /**
+     * Handles data sent via chrome.extension.sendRequest().
+     * @param request Object Data sent in the request.
+     * @param sender Object Origin of the request.
+     * @param callback Function The method to call when the request completes.
+     */
+    function onRequest(request, sender, callback) {
+      // Only supports the 'fetchFrfApi' method, although this could be
+      // generalized into a more robust RPC system.
+      if (request.action == 'fetchFrfApi') {
+        fetchFrfApi(request.url, callback);
+      }
+    }
+
+    chrome.extension.onRequest.addListener(onRequest);
+  </script>
+  </body>
+</html>

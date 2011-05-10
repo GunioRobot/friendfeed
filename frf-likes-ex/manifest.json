@@ -1,0 +1,17 @@
+{
+   "name": "Friendfeed likes sorter",
+   "version": "0.2",
+   "description": "Sorts likes by date. Adds 'Show likes time' link to show timestamp for each like.",
+   "permissions": [
+      "http://friendfeed-api.com/*"
+    ],
+    "icons": {
+      "48" : "icon_48.png",
+      "128" : "icon_128.png"
+    },
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "http://friendfeed.com/*" ]
+   } ],
+   "background_page": "background.html"
+}
