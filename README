@@ -5,6 +5,8 @@ Collection of my scripts for friendfeed.com.
 Google Chrome extension. 
 Adds a small button to the left of each comment's bubble to copy unique comment url in the clipboard. Button is shown on mouse hover.
 
+frf-comments-ex.crx - Packed extension
+
 -= frf-fix-rel-timestamp =-
 
 Google Chrome extension. 
@@ -12,10 +14,14 @@ Google Chrome extension.
 - Adds a 'title' attribute with date string in value for unique url of each entry (the one below the entry content).
 If entry or comment was posted today, only time is shown.
 
+frf-fix-rel-timestamp.crx - Packed extension
+
 -= frf-likes-ex =- 
 
 Google Chrome extension. 
 Sorts likes for each entry by date when like was added. Adds '>>>' link to show timestamp [yyyy-mm-dd hh:mm:ss] after each like.
+
+frf-likes-ex.crx - Packed extension
 
 -= frf_show_likes_time.user.js =- 
 
